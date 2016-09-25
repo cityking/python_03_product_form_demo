@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>产品添加</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+  
+  <form class="form-horizontal" method="post" action={% url 'add2' %}>
+    {% csrf_token %}
+    {{ product_form.as_p }}
+    <input type="submit" value="send">
+ </form>
+
+
+</body>
+</html>
