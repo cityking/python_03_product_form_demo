@@ -9,6 +9,10 @@
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
 <body>
+<form method="post" action="{% url 'list' %}">
+{% csrf_token %}
+{{query_form}}<input type="submit" value="search">
+</form>
 <div id="legend" class="">
   <legend class="">产品列表&nbsp;&nbsp;<a href="{% url 'add' %}"><small>添加</small></a></legend>
 </div>
@@ -32,7 +36,7 @@
          <td>{{ product.cate }}</td>
         <td>{{ product.stock }}</td>
          <td>{{ product.price }}</td>
-        <td><a href="{% url 'update2' product.id%}">修改</a>|
+        <td><a href="{% url 'update3' product.id%}">修改</a>|
             <a href="{% url 'delete' product.id%}">删除</a></td>
 
       </tr>

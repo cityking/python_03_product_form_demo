@@ -25,5 +25,7 @@ urlpatterns = [
     url(r'^list/$', views.list,name='list'),
     url(r'^add2/$', views.add2, name='add2'),
 
+    url(r'^add3/$', views.add3, name='add3'),
     url(r'^update2/(?P<id>\d+)/$', views.update2,name='update2'),
+    url(r'^update3/(?P<id>\d+)/$', views.update3,name='update3')
 ]
